@@ -1,0 +1,22 @@
+name: momind
+description: "Aplikasi Kesehatan Mental untuk Bunda - Project ETS Pemrograman Mobile"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+# Bagian ini adalah solusi untuk error SDK constraint kamu [cite: 32]
+environment:
+  sdk: '^3.9.0' # Sesuai dengan saran pada pesan error kamu
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
