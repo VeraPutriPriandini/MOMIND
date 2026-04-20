@@ -1,3 +1,12 @@
+Nama Kelompok : 
+- Mochamad Rico Andreano 24082010005
+- Sisilia Roudhotun Nabila 24082010009
+- Vera Putri Priandini 24082010010
+- Ainur Rohmah 24082010030
+- Balqis Safira 24082010037
+Deskripsi Aplikasi : Aplikasi Momind untuk kesehatan mental ibu double job
+Model Bisnis : Freemium pada fitur artikel/tips and trick pada menu home screen
+
 # myapp
 
 A new Flutter project.
