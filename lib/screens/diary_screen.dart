@@ -1,21 +1,22 @@
 import 'package:flutter/material.dart';
 import '../models/mood_model.dart';
-import '../widgets/diary_card.dart';
-import '../widgets/diary_form_card.dart';
+import '../widgets/diary_card.dart';//menampilkan 1 diary
+import '../widgets/diary_form_card.dart';//input diary
 
-class DiaryScreen extends StatefulWidget {
+class DiaryScreen extends StatefulWidget {//halaman diary
   const DiaryScreen({super.key});
 
   @override
   State<DiaryScreen> createState() => _DiaryScreenState();
-}
+}//menghubungkan ke class state dibawah
 
+//data disimpan dan dijalankan
 class _DiaryScreenState extends State<DiaryScreen> {
   // Requirement: Minimal 5-10 Dummy Data
   final List<MoodModel> diaries = MoodModel.generateDummy();
 
-  void _handleSave(String text) {
-    setState(() {
+  void _handleSave(String text) {//saat tekan simpan
+    setState(() {//ui berubah (update)
       // Requirement: setState untuk update list
       diaries.insert(
         0,
@@ -23,7 +24,7 @@ class _DiaryScreenState extends State<DiaryScreen> {
       );
     });
     ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
+      const SnackBar(//notifikasi
         content: Text("Berhasil Disimpan!"),
         backgroundColor: Color(0xFFFFB6C1),
       ),
@@ -86,7 +87,7 @@ class _DiaryScreenState extends State<DiaryScreen> {
             const SizedBox(height: 25),
 
             // Section 1: Form (Modular)
-            DiaryFormCard(onSave: _handleSave),
+            DiaryFormCard(onSave: _handleSave),//user isi form
 
             const SizedBox(height: 30),
             const Text(
@@ -100,7 +101,7 @@ class _DiaryScreenState extends State<DiaryScreen> {
               shrinkWrap: true, // Biar bisa masuk di dalam parent ListView
               physics:
                   const NeverScrollableScrollPhysics(), // Scroll diatur parent
-              itemCount: diaries.length,
+              itemCount: diaries.length,//nampilin sesuai data
               itemBuilder: (context, index) => DiaryCard(diary: diaries[index]),
             ),
             const SizedBox(height: 20),
